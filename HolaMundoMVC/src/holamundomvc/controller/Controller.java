@@ -14,6 +14,7 @@ import holamundomvc.nview.View;
  */
 public class Controller {
     public void run (View a, Model b){
+        
         String prueba = b.getGreeting();
         a.showGreeting(prueba);
         

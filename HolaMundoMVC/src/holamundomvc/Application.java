@@ -26,17 +26,19 @@ public class Application {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Controller prueba = null;
         
-        View pruebav;
-        ViewFactory pruebaf = null;
-        pruebav = pruebaf.getView();
         
-        Model pruebam;
-        ModelFactory pruebamf = null;
-        pruebam = pruebamf.getModel();
+        View pruebaVista;
+        ViewFactory pruebaVistaFac = new ViewFactory();
+        pruebaVista = pruebaVistaFac.getView();
         
-        prueba.run(pruebav, pruebam);
+        Model pruebaModel;
+        ModelFactory pruebaModelFac = new ModelFactory();
+        pruebaModel = pruebaModelFac.getModel();
+        
+        Controller prueba = new Controller();
+        
+        prueba.run(pruebaVista, pruebaModel);
     }
     
 }
