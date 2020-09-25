@@ -6,9 +6,14 @@
 package holamundomvc.modelo;
 
 /**
- *Contains the method that gets the greeting message and returns it as a String.
+ *Contains the method to get the greeting message, which is sent back as a String.
  * @author MartinGros
  */
-public class Model {
+public interface Model {
+    /**
+     *
+     * @return Send the greeting message back as a string.
+     */
+    public String getGreeting();
     
 }

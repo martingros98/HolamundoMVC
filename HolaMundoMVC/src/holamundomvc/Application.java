@@ -5,6 +5,13 @@
  */
 package holamundomvc;
 
+import holamundomvc.controller.Controller;
+import holamundomvc.modelo.Model;
+import holamundomvc.modelo.ModelFactory;
+import holamundomvc.nview.View;
+import holamundomvc.nview.ViewFactory;
+import holamundomvc.nview.ViewImplementation;
+
 /**
  * get view obtiene una vista
  * get mode obtiene el modelo
@@ -19,6 +26,17 @@ public class Application {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Controller prueba = null;
+        
+        View pruebav;
+        ViewFactory pruebaf = null;
+        pruebav = pruebaf.getView();
+        
+        Model pruebam;
+        ModelFactory pruebamf = null;
+        pruebam = pruebamf.getModel();
+        
+        prueba.run(pruebav, pruebam);
     }
     
 }
