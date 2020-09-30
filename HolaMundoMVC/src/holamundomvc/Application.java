@@ -11,6 +11,7 @@ import holamundomvc.modelo.ModelFactory;
 import holamundomvc.nview.View;
 import holamundomvc.nview.ViewFactory;
 import holamundomvc.nview.ViewImplementation;
+import holamundomvc.nview.utilidades.Util;
 
 /**
  * get view obtiene una vista
@@ -28,17 +29,23 @@ public class Application {
         // TODO code application logic here
         
         
-        View pruebaVista;
-        ViewFactory pruebaVistaFac = new ViewFactory();
-        pruebaVista = pruebaVistaFac.getView();
+        View vista;
+        ViewFactory vistaFac = new ViewFactory();
+        Model modelo;
+        ModelFactory modelFac = new ModelFactory();
+
+        int opc=0;
+        System.out.println("Para modo consola: 1");
+        System.out.println("Para modo grafico: 2");
+        opc=Util.leerInt(1, 2);
         
-        Model pruebaModel;
-        ModelFactory pruebaModelFac = new ModelFactory();
-        pruebaModel = pruebaModelFac.getModel();
         
-        Controller prueba = new Controller();
+        vista = vistaFac.getView(opc);
+        modelo = modelFac.getModel();
         
-        prueba.run(pruebaVista, pruebaModel);
+        Controller controlador = new Controller();
+        
+        controlador.run(vista, modelo);
     }
     
 }

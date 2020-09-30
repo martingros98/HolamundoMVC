@@ -11,9 +11,15 @@ package holamundomvc.nview;
  */
 public class ViewFactory {
     
-    public View getView(){
+    public View getView(int n){
+        if(n == 1){
         
-        return new ViewImplementation();
+            return new ViewImplementation();
+        }
+        else{
+            return new GraphicViewImplementation();
+        }
+        
     }
     
 }

@@ -7,17 +7,19 @@ package holamundomvc.controller;
 
 import holamundomvc.modelo.Model;
 import holamundomvc.nview.View;
+import holamundomvc.nview.utilidades.Util;
+
 
 /**
  *
  * @author 2dam
  */
 public class Controller {
-    public void run (View a, Model b){
-        
-        String prueba = b.getGreeting();
-        a.showGreeting(prueba);
-        
+    public void run (View vista, Model modelo){
+
+            String saludo = modelo.getGreeting();
+            vista.showGreeting(saludo);
+ 
         
     }
     
